@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+i=1
+y=0
+while((i <= 59 && y<=12)); do 
+if((i==1)); then
+echo "Hour: $y"
+fi
+if ((i == 59)); then
+echo "$i"
+i=0
+((y++))
+else
+echo "$i"
+fi;
+i=$((i+1))
+done
+
