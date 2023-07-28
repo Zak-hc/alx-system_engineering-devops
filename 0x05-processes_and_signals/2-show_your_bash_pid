@@ -2,8 +2,8 @@
 #Bash script that displays lines containing the bash word, thus allowing you to easily get the PID of your Bash process
 yoy=$(ps auxf)
 while read -r line; do
-  if [[ "$line" == *bash* ]]; then
-    echo "$line"
-  fi
+if [[ "$line" == *bash* ]]; then
+echo "$line"
+fi
 done <<< $yoy
 
