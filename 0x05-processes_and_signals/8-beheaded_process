@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-#kill the ex
+# Kill the ex
 
 pkill -f -SIGKILL 7-highlander
