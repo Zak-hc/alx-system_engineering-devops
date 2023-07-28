@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 #stop pid
 pid=$(4-to_infinity_and_beyond)
-if [[ -n "$pid" ]]; then
 pkill "$pid"
-fi
