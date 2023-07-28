@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#kill the ex
 pkill "$(7-highlander)"
