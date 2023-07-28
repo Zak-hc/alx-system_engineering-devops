@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #Bash script that displays a list of currently running processes.
-koukou=$(ps -aux)
+koukou=$(ps auxf)
 echo "$koukou"
 
