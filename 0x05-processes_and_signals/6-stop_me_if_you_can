@@ -2,6 +2,5 @@
 #stop pid
 pid=$(4-to_infinity_and_beyond)
 if [[ -n "$pid" ]]; then
-sleep 1
 pkill "$pid"
 fi
