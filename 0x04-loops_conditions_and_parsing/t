@@ -1,0 +1,8 @@
+max () {
+if [ $1 -gt $2 ]; then
+echo "the max is : $1"
+else
+echo "the max is : $2"
+fi
+}
+max 90 900
