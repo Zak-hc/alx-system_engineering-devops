@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Get all active IPv4 IPs
-ips=$(ip addr show | awk '/inet / {print $2}' | cut -d/ -f1)
+ips=$(ip addr show | awk '/inet /  {print $2}' | cut -d/ -f1)
 for ip in $ips; do
   echo "$ip"
 done
