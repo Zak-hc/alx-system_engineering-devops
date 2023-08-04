@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#conxx
+nc -l localhost 98
