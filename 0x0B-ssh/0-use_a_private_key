@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#task that does not work with me 
+ssh -i ~/.ssh/school ubuntu@52.3.250.146
