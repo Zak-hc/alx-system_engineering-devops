@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "printing by us"
+git commit -m "task $1"
 git push
