@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Fix my server with these magic 2 lines
+sudo service apache2 status
+sudo service apache2 start
+sudo service apache2 status
+curl 0:8080
