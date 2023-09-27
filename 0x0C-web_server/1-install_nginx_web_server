@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # installing nginx verif and printing our msg
+apt-get -y update
 apt-get -y install nginx
 sudo service nginx status
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
