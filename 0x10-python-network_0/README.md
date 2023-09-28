@@ -14,6 +14,6 @@ What HTTP headers are
 What the HTTP message body is
 What an HTTP request method is
 What an HTTP response status code is
-What an HTTP Cookie is
+What an HTTP Cookie iis
 How to make a request with cURL
 What happens when you type google.com in your browser (Application level)
