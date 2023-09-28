@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# installing nginx verif and printing our msg
-
+# installing Nginx on your server
 apt-get -y update
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
+ufw allow 80/tcp
 service nginx start
