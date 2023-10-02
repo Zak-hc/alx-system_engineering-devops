@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# ngnx HTTP response contains a custom header  web-01 and web-02
 sudo apt-get update
 sudo apt-get install nginx -y
 server_hostname=$(hostname)
