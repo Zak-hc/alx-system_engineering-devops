@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#HAproxy
+apt-get update
+apt-get install haproxy
+echo "frontend my_frontend
+  bind *:80
+  mode http
+  default_backend my_backend
+
+backend my_backend
+  mode http
+  balance roundrobin
+  server web1 34.203.201.154:80 check
+  server web2 100.26.132.249:80 check" >/etc/haproxy/haproxy.cfg
+systemctl enable haproxy
+systemctl start haproxy
