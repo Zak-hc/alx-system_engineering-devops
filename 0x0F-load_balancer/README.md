@@ -1,2 +1,2 @@
 #!/bin/bash
-ddiscrep 0x02. Shell, I/O Redirections and filters
+discrep 0x02. Shell, I/O Redirections and filters
