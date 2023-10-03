@@ -10,6 +10,7 @@ echo "frontend my_frontend
   default_backend my_backend
 
 backend my_backend
+  listen load_balancer
   mode http
   balance roundrobin
   option forwardfor 
