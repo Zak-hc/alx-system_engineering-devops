@@ -2,6 +2,8 @@
 #HAproxy
 apt-get update
 apt-get install haproxy
+echo "ENABLED=1" > /etc/default/haproxy
+
 echo "frontend my_frontend
   bind *:80
   mode http
@@ -10,6 +12,7 @@ echo "frontend my_frontend
 backend my_backend
   mode http
   balance roundrobin
+  option httpclose
   server web1 34.203.201.154:80 check
   server web2 100.26.132.249:80 check" >/etc/haproxy/haproxy.cfg
 systemctl enable haproxy
