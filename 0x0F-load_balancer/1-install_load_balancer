@@ -7,9 +7,9 @@ echo "ENABLED=1" > /etc/default/haproxy
 echo "frontend my_frontend
   bind *:80
   mode http
-  default_backend my_backend
+  default_backend app
 
-backend my_backend
+backend app
   listen load_balancer
   mode http
   balance roundrobin
