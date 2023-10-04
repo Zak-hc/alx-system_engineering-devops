@@ -2,7 +2,7 @@
 # redirection to ytb
 apt-get -y update
 apt-get -y install nginx
-
+echo "Hello World!" > /var/www/html/index.html
 # url cible
 ytb="https://www.youtube.com/watch?v=QH2-TGUlwu4"
 
