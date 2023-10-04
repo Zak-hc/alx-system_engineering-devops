@@ -1,13 +1,13 @@
 #!/usr/bin/env bash                                                                                                                                                                     
 # redirection to ytb                                                                                                                                                                    
 apt-get -y update                                                                                                                                                                       
-apt-get -y install nginx                                                                                                                                                                
+apt-get -y install nginx     
+sudo su
 echo "Hello World!" > /var/www/html/index.html                                                                                                                                          
 # url cible                                                                                                                                                                             
 ytb="error_page 404 /erri100.html; \n\tlocation = /erri100.html {\n\t\tinternal;\n\t}"                                                                                                  
 #touch /var/www/html/erri100.html                                                                                                                                                       
-echo "Ceci n'est pas une page
- " >  /var/www/html/erri100.html                                                                                                                            
+echo "Ceci n'est pas une page" >  /var/www/html/erri100.html                                                                                                                            
 bv="https://www.youtube.com/watch?v=QH2-TGUlwu4"                                                                                                                                        
 fichier="/etc/nginx/sites-available/default"                                                                                                                                            
 #trnsf="root /var/www/html;"                                                                                                                                                            
