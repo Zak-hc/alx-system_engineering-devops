@@ -24,4 +24,4 @@ sed -i "\%^\troot /var/www/html;%a\ \tlocation /redirect_me { return 301 $ytb;}"
 #sudo nginx -t
 
 # Reload Nginx to apppply the changes
-systemctl restart nginx
+service nginx restart
