@@ -2,6 +2,7 @@
 # redirection to ytb
 apt-get -y update
 apt-get -y install nginx
+sudo su
 echo "Hello World!" > /var/www/html/index.html
 # url cible
 ytb="https://www.youtube.com/watch?v=QH2-TGUlwu4"
@@ -23,4 +24,4 @@ sed -i "\%^\troot /var/www/html;%a\ \tlocation /redirect_me { return 301 $ytb;}"
 #sudo nginx -t
 
 # Reload Nginx to apppply the changes
-service nginx restart
+systemctl start nginx
