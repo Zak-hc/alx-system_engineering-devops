@@ -1,0 +1,28 @@
+#!/usr/bin/env bash                                                                                                     
+# redirection to ytb                                                                                                    
+apt-get -y update                                                                                                       
+apt-get -y install nginx                                                                                                
+echo "Hello World!" > /var/www/html/index.html                                                                          
+# url cible                                                                                                             
+ytb="location /xyz { return 404 \"Ceci n'est pas une page\";\}"                            
+bv="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+#echo "Ceci n'est pas une page" > /var/www/html/index.html                                                                                                                         
+#etc/nginx/sites-available/ 
+# config cible                                                                                                          
+#trn="location /redirect_me { return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;}"                                                                                             
+#}"                                                                                                                     
+                                                                                                                        
+# path file                                                                                                             
+file="/etc/nginx/sites-available/default"                                                                              
+                                                                                                                        
+#sudo sed -i "/ location / {/a\                                                                                         
+#$trn" $file                                                                                                            
+
+#sed -i "\%^\troot /var/www/html;%a\ \tlocation /redirect_me { return 301 $bv;}" $file                                                                                         
+sed -i "\%^\troot /var/www/html;%a\ \t$ytb" $file                                                                                      
+                                                                                                                        
+# Test the Nginx configuration                                                                                          
+nginx -t                                                                                                          
+                                                                                                                        
+# Reload Nginx to apppply the changes                                                                                   
+service nginx restart  
