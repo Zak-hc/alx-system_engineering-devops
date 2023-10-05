@@ -2,7 +2,7 @@
 #HAproxy
 apt-get update
 apt-get install haproxy
-echo "ENABLED=1" > /etc/default/haproxy
+echo "ENABLED=2" > /etc/default/haproxy
 
 echo "frontend my_frontend
   bind *:80
