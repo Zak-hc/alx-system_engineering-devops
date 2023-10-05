@@ -11,7 +11,7 @@ echo "
   balance roundrobin
   option forwardfor 
   option httpclose
-  server web1 34.203.201.154:80 check
-  server web2 100.26.132.249:80 check" >/etc/haproxy/haproxy.cfg
+  server 396377-web-01 34.203.201.154:80 check
+  server 396377-web-02 100.26.132.249:80 check" >/etc/haproxy/haproxy.cfg
 systemctl enable haproxy
 service haproxy restart
