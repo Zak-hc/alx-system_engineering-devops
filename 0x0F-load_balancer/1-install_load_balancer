@@ -8,10 +8,9 @@ echo "
   listen load_balancer
   bind *:80
   mode http
+  option httpclose
   balance roundrobin
   option forwardfor 
-  option httpclose
-  server 396377-web-01 34.203.201.154:80 check
+  server 396377-web-01 imllil.tech:80 check
   server 396377-web-02 100.26.132.249:80 check" >/etc/haproxy/haproxy.cfg
-systemctl enable haproxy
-service haproxy restart
+service haproxy start
