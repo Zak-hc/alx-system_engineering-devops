@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#debg
+file_to_remove="/etc/nginx/sites-enabled/default"
+file_that_point="/etc/nginx/sites-available/default"
+rm "$file_to_remove"
+ln -s "$file_that_point" "$file_to_remove"
