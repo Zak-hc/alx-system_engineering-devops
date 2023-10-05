@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#HAproxy
+#HAproxyy
 apt-get update
 apt-get install haproxy
 echo "ENABLED=1" > /etc/default/haproxy
@@ -12,5 +12,5 @@ echo "
   balance roundrobin
   option forwardfor 
   server 396377-web-01 imllil.tech:80 check
-  server 396377-web-02 100.26.132.249:80 check" >/etc/haproxy/haproxy.cfg
+  server 396377-web-02 100.26.132.249:80 check" >>/etc/haproxy/haproxy.cfg
 service haproxy start
