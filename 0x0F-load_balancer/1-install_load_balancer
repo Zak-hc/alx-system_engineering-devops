@@ -5,12 +5,13 @@ apt-get install haproxy
 echo "ENABLED=1" > /etc/default/haproxy
 
 echo "
-  listen load_balancer
-  bind *:80
-  mode http
-  balance roundrobin
-  option httpclose
-  option forwardfor 
-  server 396377-web-01 imllil.tech:80 check
-  server 396377-web-02 100.26.132.249:80 check" >> /etc/haproxy/haproxy.cfg
+   listen load_balancer
+   bind *:80
+   mode http
+   balance roundrobin
+   option httpclose
+   option forwardfor 
+   server 396377-web-01 imllil.tech:80 check
+   server 396377-web-02 100.26.132.249:80 check
+" >> /etc/haproxy/haproxy.cfg
 service haproxy start
