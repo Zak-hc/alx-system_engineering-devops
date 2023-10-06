@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #debg
-rm /etc/nginx/sites-enabled/default
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
-pkill -o nginx
+kill -o nginx
