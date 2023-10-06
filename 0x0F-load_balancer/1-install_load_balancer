@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#HAproxyyy
+#HAproxyyiy
 apt-get update
 apt-get install nginx
 apt-get install haproxy
