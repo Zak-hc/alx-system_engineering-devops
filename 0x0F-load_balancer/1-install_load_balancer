@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 #HAproxyyy
 apt-get update
-apt-get install nginx -y
+apt-get install nginx
 apt-get install haproxy
 echo "ENABLED=1" > /etc/default/haproxy
 
 echo "
-listen load_balancer
-        bind *:80
-        mode http
-        balance roundrobin
-        server 396377-web-01 imllil.tech:80 check
-        server 396377-web-02 100.26.132.249:80 check
+frontend http_front
+    bind *:80
+    default_backend http_rear
+
+backend http_rear
+    balance roundrobin
+    server 387178-web-01 100.25.19.136:80 check
+    server 387178-web-02 35.174.205.13:80 check
 " >> /etc/haproxy/haproxy.cfg
 service haproxy start
