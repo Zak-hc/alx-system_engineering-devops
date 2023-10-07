@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#subdomain
+domain="${1%.}"  # Supprime le point final du domaine s'il est présent
+v=$(dig "www.$domain" +short | awk 'NR==1{print}')
+vi=$(dig "lb-01.$domain" +short | awk 'NR==1{print}')
+va=$(dig "web-01.$domain" +short | awk 'NR==1{print}')
+vo=$(dig "web-02.$domain" +short | awk 'NR==1{print}')
+if [ $# -lt 2  ]; then
+        echo "The subdomain www is a A record and points to $v"
+        echo "The subdomain lb-01 is a A record and points to $vi"
+        echo "The subdomain web-01 is a A record and points to $va"
+        echo "The subdomain web-02 is a A record and points to $vo"   
+elif [ $# -eq 2  ]; then
+        ops=$(dig "$2.$domain" +short | awk 'NR==1{print}')
+        echo "The subdomain $2 is a A record and points to $ops"
+fi
