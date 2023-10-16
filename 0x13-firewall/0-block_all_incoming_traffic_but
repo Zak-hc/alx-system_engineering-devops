@@ -1,3 +1,4 @@
+sudo su
 apt-get install ufw
 ufw status
 ufw allow 22/tcp
