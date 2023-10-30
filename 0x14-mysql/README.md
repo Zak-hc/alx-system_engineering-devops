@@ -3,4 +3,4 @@ For this project, we expect to look at these concepts:
 
 Database administration
 Web stack debugging
-[How to] Install mysql 5.7
+solve prblm database (master-slave/master1:slave1-master2:slave2)
