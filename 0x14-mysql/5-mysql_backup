@@ -1,5 +1,8 @@
-db="--all-databases"
-user="root"
-stock_db="backup.sql"
-mysqldump -u $user -p"$1" "$db" > "$stock_db"
+#!/usr/bin/env bash
+# a script that generate a mysqldump and creates a compressed archive
+#db="--all-databases"
+#user="root"
+#mysqldump -uroot -p"$1" --all-databases > backup.sql
+#tar -cvzf "$(date +%d-%m-%Y)".tar.gz backup.sql
+mysqldump -uroot -p"$1" --all-databases > backup.sql
 tar -cvzf "$(date +%d-%m-%Y)".tar.gz backup.sql
