@@ -1,0 +1,5 @@
+db="--all-databases"
+user="root"
+stock_db="backup.sql"
+mysqldump -u $user -p"$1" "$db" > "$stock_db"
+tar -cvzf "$(date +%d-%m-%Y)".tar.gz backup.sql
