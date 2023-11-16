@@ -1,6 +1,4 @@
-
-o Fix problem of high amount of requests
-f high amount of requests
+#Fix problem of high amount of requests
 
 exec {'replace':
   provider => shell,
